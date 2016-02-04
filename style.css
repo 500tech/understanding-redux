@@ -1,0 +1,49 @@
+body {
+  background-color: black;
+  padding: 0;
+  margin: 0;
+}
+
+.loader {
+  position: absolute;
+  left: calc(50vw - 60px);
+  top: calc(50vh - 60px);
+  width: 120px;
+  height: 120px;
+  background: url("./loader.svg") no-repeat center;
+  z-index: -1;
+}
+
+.status-image {
+  background: no-repeat center;
+  background-size: contain;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.prev, .next {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  opacity: 0.8;
+  margin: 0 20px;
+}
+
+.prev:hover, .next:hover {
+  opacity: 1;
+}
+
+.prev:after {
+  content: '←';
+}
+
+.next:after {
+  content: '→';
+}
